@@ -12,7 +12,7 @@ pipeline {
         
         stage ("Build JAR") {
             steps {
-                sh "mvn clean install"
+                 sh 'mvn -f spring_boot_app/java-maven-sonar-argocd-helm-k8s/spring-boot-app/pom.xml clean install'
             }
         }
         
