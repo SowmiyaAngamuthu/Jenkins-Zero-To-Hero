@@ -17,7 +17,8 @@ pipeline {
         
        stage('Build') {
             steps {
-                sh "mvn package -DskipTests=true"
+                sh pwd
+                sh 'mvn -f java-maven-sonar-argocd-helm-k8s/spring-boot-app/pom.xml clean install'
             }
         }
         
