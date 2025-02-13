@@ -1,1 +1,14 @@
 
+pipeline {
+    agent any
+
+    
+    {
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/SowmiyaAngamuthu/Jenkins-Zero-To-Hero/tree/main/java-maven-sonar-argocd-helm-k8s']])
+            }
+        }}
+}
+}
