@@ -19,7 +19,7 @@ pipeline {
             steps {
             
                 sh 'mvn -f java-maven-sonar-argocd-helm-k8s/spring-boot-app/pom.xml clean install'
-                sh sudo pwd
+                
             }
         }
         
